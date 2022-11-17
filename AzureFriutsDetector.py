@@ -5,7 +5,7 @@ from msrest.authentication import ApiKeyCredentials
 from Config import *
 
 
-imgSource = "D:/jucav/Documents/Proyectos/ProyectoIMTC/Img/DataSets/4.jpg"
+imgSource = "D:/jucav/Documents/Proyectos/ProyectoIMTC/Img/DataSets/17.jpg"
 
 ##Validadores de Azure##
 preditionCredentials = ApiKeyCredentials(in_headers={"Prediction-key": preditionKey})
