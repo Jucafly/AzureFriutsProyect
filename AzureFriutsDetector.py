@@ -35,7 +35,7 @@ def AzureConnection (image2Send):
 
 window = Tk()
 window.title("Imagen para Azure")
-window.geometry("500x500")
+window.geometry("900x900")
 
 
 ####-----MAIN-----####
@@ -49,9 +49,7 @@ while (cap.isOpened()):
     ret, frame = cap.read() 
     cv2.imwrite(imgtempath,frame)
     time.sleep(3)
-    #imgPNG = cv2.imread('D:\\jucav\\Documents\\Proyectos\\ProyectoIMTC\\Img\\AzFotos\\Azfoto.jpg')
     
-
     break
 
   
@@ -62,13 +60,17 @@ AzureConnection(imgtempath)
 
 uimg = 'D:\jucav\Documents\Proyectos\ProyectoIMTC\Img\AzFotos\Azfoto.png'
 img = PhotoImage(name="ImagenTest",file=uimg)
+
 label = Label(window,image=img,bd=5,relief=SUNKEN)
 label.pack(padx=10,pady=10)
 
+etiqueta = Label(window, text = "Cosas",bg = "blue")
+etiqueta.pack(padx=10, pady=10)
+
+
+
+
 window.mainloop()
-
-
-
 cap.release()
 cv2.destroyAllWindows()
 
